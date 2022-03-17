@@ -1,0 +1,41 @@
+<script>
+/*
+ function darNombreCompleto(nombre,apellido)
+ {
+     const nombreCompleto = `${nombre} ${apellido}`;
+     return 0;
+
+ }
+
+ const nombreAImprimir = darNombreCompleto("YAMID" , "HELI");
+
+ alert(nombreAImprimir);
+    SUMAR
+  */
+  
+  function sumar(x,y)
+   {
+       if(x>y)
+       {
+        return x+y;
+       }
+       else if(x<y)
+       {
+        return x-y;
+       }
+       else
+       {
+           return "SON IGUALES";
+       }
+   }
+
+
+   const operador1 = parseInt(prompt("Ingrese numero 1"));
+   const operador2 = parseInt(prompt("Ingrese numero 2"));
+
+   const suma = sumar(operador1, operador2);
+   const suma2 = sumar(3, 5);
+   alert(suma);
+   alert(suma2);
+  
+</script>

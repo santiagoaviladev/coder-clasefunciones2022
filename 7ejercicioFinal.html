@@ -9,15 +9,81 @@
                
     */
 
+   function menu(op)
+   {
+       
+           if(op==="SUMA")
+           {
+              sumar();
+              init();
+           }
+           else if(op==="MUL")
+           {
+               multiplicar();
+               init();
+
+           }
+           else if(op==="SEC")
+           {
+               secuencia();
+               init();
+           }
+           else{
+               alert("OPCION INVALIDA");
+               init();
+           }
+       
+   }
+
     /*FUNCION 2: 
         Escriba una función que dado un número n, retorne la suma de los números ingresados por el usuario. 
     */
+
+    function sumar(){
+        const n = parseInt(prompt("Ingresa un numero de operandos"));
+        let contador =0;
+        let resultado = 0;
+            if(!isNaN(n))
+            {
+                while(contador<n)
+                {   
+                    let num = parseInt(prompt("Ingresa un numero"));
+                    if(!isNaN(num))
+                    {
+                        resultado+=num;
+                    }
+                    contador++;
+                }
+            }
+            alert("SU RESULTADO ES: "+resultado);
+        
+    }
 
     //FUNCION 3:
     /*
         Escriba una función que dado un número n, retorne la multiplicación de los números ingresados por el usuario.
 
     */ 
+
+    function multiplicar()
+    {
+        const n = parseInt(prompt("Ingresa un numero de operandos"));
+        let contador =0;
+        let resultado = 1;
+            if(!isNaN(n))
+            {
+                while(contador<n)
+                {   
+                    let num = parseInt(prompt("Ingresa un numero"));
+                    if(!isNaN(num))
+                    {
+                        resultado*=num;
+                    }
+                    contador++;
+                }
+            }
+            alert("SU RESULTADO ES: "+resultado);
+    }
 
     //FUNCION 4: 
     /*
@@ -28,5 +94,65 @@
                     n-1 + n-2
             d. El sistema debe mostrar una ventana donde el usuario debe ingresar una opción de las mencionadas arriba o FIN para terminar
     */
+    function secuencia()
+    {
+        const n = parseInt(prompt("Ingresa un numero pata mostrar la secuencia"));
+        let resultado ="";
+        
+        let n1 = 1;
+        let n2 = 1;
+        if(n==0) 
+            {
+                resultado = "1";
+            }
+            else if(n==1)
+            {
+                resultado = "1,1";
+            }
+        else 
+        {
+            let contador=1;
+            resultado = "1, 1";
+            while(contador<n)
+            {
+            
+                let nuevo = n1+n2;
+                resultado +=", "+nuevo;
+                n1=n2;
+                n2=nuevo;
+                contador++;
+            }
+        }
+        
+        alert("SU SECUENCIA ES: "+resultado)
+    }
+
+    let op = "";
+    function init()
+    {
+        
+        while(op!== "FIN" )
+        {
+               
+            op = prompt(`Ingrese una opción
+                      SUMA
+                      MUL
+                      SEC  
+                      FIN `);
+
+            if(op!=="FIN") 
+            {
+                menu(op);
+            }
+            else{
+               
+                alert("GRACIAS POR USAR NUESTRO SERVICIO");
+            }
+            
+        }
+        
+    }
+    init();
+
 
 </script>
