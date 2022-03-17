@@ -1,11 +1,24 @@
 <script>
 
     /*FUNCION 1: 
-            Escriba una función que permita seleccionar una operación de las siguientes: 
-
-            a. SUMAR UN NÚMERO n DE NÚMEROS  (sumar(n))
-            b. MULTIPLICAR Un Número n de operandos (factorial(c))
-            c. SECUENCIA (secuencia(a))
+            Escriba una función que permita mostrar el menú de una calculadora avanzada. 
+            El programa debe mostrar siempre las siguientes opciones: 
+                SUMA_AVANZADA 
+                MULTIPLICACION_AVANZADA
+                SECUENCIAR 
+                FIN
+                
+            Su programa debe mostrar la ventana de opciones siempre, hasta que el usuario ingrese la palabra FIN.
+            Su programa debe validar que la opción ingresada sea correcta. 
+            Su programa debe hacer un llamado a otras funciones (QUE NO DEBE ESCRIBIR EN ESTE PUNTO) 
+            
+            Las funciones de operaciones avanzadas, tendrán los nombres mostrados: 
+            
+            a. SUMA_AVANZADA  (sumarAvanzado(n))
+            b. MULTIPLICACION_AVANZADA (multiplicarAvanzado(c))
+            c. SECUENCIA (secuenciar(a))
+            
+            
                
     */
 
@@ -37,6 +50,12 @@
 
     /*FUNCION 2: 
         Escriba una función que dado un número n, retorne la suma de los números ingresados por el usuario. 
+        Es decir, si el usuario ingresa por ejemplo, el número 5, debe mostrarle 5 veces una ventana que permita ingresar un número y retornar el valor de la suma de 
+        los n números ingresados. 
+        
+        Su programa debe validar que el dato inicial ingresado por el usuario sea un número. 
+        Su programa debe validar que cada operando sea un número 
+        Su programa debe mostrar la opción de "INGRESAR UN NÚMERO", a menos que el usuario escriba 'MENU', con lo cual su programa debe finalizar. 
     */
 
     function sumar(){
@@ -61,7 +80,13 @@
 
     //FUNCION 3:
     /*
-        Escriba una función que dado un número n, retorne la multiplicación de los números ingresados por el usuario.
+        Escriba una función que dado un número n, retorne la multiplicación de los números ingresados por el usuario. 
+        Es decir, si el usuario ingresa por ejemplo, el número 5, debe mostrarle 5 veces una ventana que permita ingresar un número y retornar
+        el valor de la multiplicación de los n números ingresados. 
+        
+        Su programa debe validar que el dato inicial ingresado por el usuario sea un número. 
+        Su programa debe validar que cada operando sea un número 
+        Su programa debe mostrar la opción de "INGRESAR UN NÚMERO", a menos que el usuario escriba 'MENU', con lo cual su programa debe finalizar. 
 
     */ 
 
@@ -92,7 +117,7 @@
                 Siempre que n sea 1, secuencia retorna 1
                 Para todos los demás números, secuencia retorna
                     n-1 + n-2
-            d. El sistema debe mostrar una ventana donde el usuario debe ingresar una opción de las mencionadas arriba o FIN para terminar
+     d. El sistema siempre debe mostrar una ventana donde le permite al usuario "INGRESAR UN NÚMERO" o "MENU" para finalizar.
     */
     function secuencia()
     {
